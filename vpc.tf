@@ -98,7 +98,7 @@ resource "aws_route_table" "eu-west-1a-public" {
     }
 }
 
-resource "aws_route_table_association" "eu-west-1a-public" {
-    subnet_id = "${aws_subnet.sg_devops.id}"
-    route_table_id = "${aws_route_table.eu-west-1a-public.id}"
+resource "aws_route_table_association" "sub_public_devops" {
+    subnet_id = "${aws_subnet.sub_public_devops.id}"
+    route_table_id = "${aws_route_table.sub_public_devops.id}"
 }
