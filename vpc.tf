@@ -81,6 +81,24 @@ resource "aws_subnet" "sub_public_devops" {
     availability_zone = "eu-west-1a"
 
     tags {
-        Name = "Public Subnet"
+        Name = "sub_public_devops"
     }
+}
+
+resource "aws_route_table" "eu-west-1a-public" {
+    vpc_id = "${aws_vpc.default.id}"
+
+    route {
+        cidr_block = "0.0.0.0/0"
+        gateway_id = "${aws_vpc.default.id}"
+    }
+
+    tags {
+        Name = "sub_public_devops"
+    }
+}
+
+resource "aws_route_table_association" "eu-west-1a-public" {
+    subnet_id = "${aws_subnet.sg_devops.id}"
+    route_table_id = "${aws_route_table.eu-west-1a-public.id}"
 }
