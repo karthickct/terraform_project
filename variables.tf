@@ -1,17 +1,13 @@
-# main creds for AWS connection
-variable "aws_access_key_id" {
-  description = "kp_devops_id"
-}
-
-variable "aws_secret_access_key" {
-  description = "kp_devops_key"
-}
+variable "aws_access_key" {}
+variable "aws_secret_key" {}
+variable "aws_key_path" {}
+variable "aws_key_name" {}
 
 variable "availability_zone" {
   description = "availability zone used for the demo, based on region"
   default = {
-    us-east-1 = "us-east-1a"
-    us-west-1 = "us-west-1a"
+    us-east-1 = "eu-west-1a"
+    us-west-1 = "eu-east-1a"
   }
 }
 
