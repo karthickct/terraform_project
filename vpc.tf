@@ -30,7 +30,7 @@ resource "aws_security_group" "sg_devops" {
         from_port = 80
         to_port = 80
         protocol = "HTTP"
-        cidr_blocks = ["${var.public_subnet_cidr}"]
+        cidr_blocks = ["0.0.0.0/0"]
     }
 
     ingress {
@@ -49,7 +49,7 @@ resource "aws_security_group" "sg_devops" {
         from_port = 22
         to_port = 22
         protocol = "ssh"
-        cidr_blocks = ["${var.vpc_cidr}"]
+        cidr_blocks = ["0.0.0.0/0"]
     }
 
 }
