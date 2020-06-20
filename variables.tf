@@ -1,10 +1,10 @@
 # main creds for AWS connection
 variable "aws_access_key_id" {
-  description = "AWS access key"
+  description = "kp_devops_id"
 }
 
 variable "aws_secret_access_key" {
-  description = "AWS secret access key"
+  description = "kp_devops_key"
 }
 
 variable "availability_zone" {
@@ -18,7 +18,7 @@ variable "availability_zone" {
 ########################### demo VPC Config ##################################
 
 variable "vpc_name" {
-  description = "VPC for building demos"
+  description = "vpc_devops"
 }
 
 variable "vpc_region" {
@@ -30,7 +30,7 @@ variable "vpc_cidr_block" {
 }
 
 variable "vpc_public_subnet_1_cidr" {
-  description = "Public 0.0 CIDR for externally accessible subnet"
+  description = "sub_public_devops"
 }
 
 variable "vpc_access_from_ip_range" {
